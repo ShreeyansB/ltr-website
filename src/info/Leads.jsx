@@ -13,13 +13,18 @@ import {
   Text,
   Tooltip,
   useDisclosure,
+  useToast,
   VStack,
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Leads = (props) => {
   const [isLoading, setisLoading] = useState(false);
+
+  const navigate = useNavigate();
+  const toast = useToast();
 
   const { isOpen, onToggle, onClose } = useDisclosure();
   const svgURL =
@@ -47,11 +52,20 @@ const Leads = (props) => {
       .then(function (response) {
         setisLoading(false);
         onToggle();
+        // navigate("/walk.html");
+        window.open("/walk.html", "_blank");
       })
       .catch(function (error) {
         console.log(error);
         setisLoading(false);
         onToggle();
+        toast({
+          title: "Error",
+          description: "Unable to contact the server.",
+          status: "error",
+          duration: 9000,
+          isClosable: true,
+        });
       });
   };
 

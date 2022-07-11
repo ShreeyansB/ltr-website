@@ -1,0 +1,250 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v5.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <title>LTR | Walkthrough</title>
+  </head>
+  <body>
+    <a-scene
+      
+      physics="debug: false;"
+    >
+      <a-assets timeout="180000">
+        <a-mixin
+          id="bbox"
+          color="tomato"
+          material="color: tomato; opacity: 0"
+        ></a-mixin>
+
+        <a-asset-item id="apartment" src="/apt.glb"></a-asset-item>
+        <img id="sky" src="/equi.jpg"></img>
+      </a-assets>
+
+      <a-entity
+        kinematic-body="radius: 0.2"
+        movement-controls="speed: 0.2; fly: true"
+        position="1 20 6"
+        look-controls
+      >
+        <a-entity camera position="0 1.1 0"></a-entity>
+      </a-entity>
+
+      <!-- Bounding box -->
+      <a-box
+        static-body
+        id="bbox-w-1"
+        position="-3.3 20 -1"
+        width="0.4"
+        height="3"
+        depth="14.5"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-1"
+        position="-1.7 20 -1.1"
+        width="0.4"
+        height="3"
+        depth="4.9"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-2"
+        position="-0.45 20 -6.7"
+        width="0.4"
+        height="3"
+        depth="5.6"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-w-2"
+        position="0.67 20 -3.18"
+        width="0.4"
+        height="3"
+        depth="4.57"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+      <a-box
+        static-body
+        id="bbox-w-3"
+        position="2.28 20 -4"
+        width="0.17"
+        height="3"
+        depth="4.87"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-3"
+        position="5 20 -5.1"
+        width="0.4"
+        height="3"
+        depth="5.6"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-w-4"
+        position="6.1 20 -2.7"
+        width="0.17"
+        height="3"
+        depth="4.87"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-w-5"
+        position="5.4 20 2.7"
+        width="0.17"
+        height="3"
+        depth="6"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-4"
+        position="5 20 -0.32"
+        width="0.4"
+        height="3"
+        depth="5.6"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-w-6"
+        position="3.67 20 -2"
+        width="0.17"
+        height="3"
+        depth="3.6"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-5"
+        position="5.12 20 5.47"
+        width="0.4"
+        height="3"
+        depth="5.6"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-6"
+        position="-3 20 5.47"
+        width="0.4"
+        height="3"
+        depth="5.6"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-n-7"
+        position="0.68 20 7"
+        width="0.4"
+        height="3"
+        depth="5.6"
+        rotation="0 90 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-w-7"
+        position="2.32 20 7"
+        width="0.17"
+        height="3"
+        depth="3.6"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-w-8"
+        position="-0.25 20 7"
+        width="0.17"
+        height="3"
+        depth="3.6"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-obj-1"
+        position="-1.58 19 1.376"
+        width="1"
+        height="1"
+        depth="1"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-obj-2"
+        position="3.8 19 2.36"
+        width="1"
+        height="1"
+        depth="3.1"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <a-box
+        static-body
+        id="bbox-obj-3"
+        position="6 19 -3.97"
+        width="1"
+        height="1"
+        depth="1.5"
+        rotation="0 0 0"
+        mixin="bbox"
+      ></a-box>
+
+      <!-- Ground -->
+      <a-plane
+        static-body
+        rotation="-90 0 0"
+        width="34"
+        height="34"
+        material="opacity: 0"
+        rotate
+        position="0 18.5 0"
+      ></a-plane>
+
+      <!-- Models -->
+    
+      <a-entity gltf-model="#apartment" position="4 18.5 0"></a-entity>
+      <a-sky src="#sky"></a-sky>
+    </a-scene>
+  </body>
+</html>

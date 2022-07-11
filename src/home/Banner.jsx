@@ -31,7 +31,7 @@ const Banner = () => {
         <Box color="white" w="30rem">
           <Heading fontSize="2.6rem">Building the landmarks that</Heading>
           <LoopText fontSize="2.55rem" color="#63B3ED" />
-          <Text mt={2} pe="4" maxW="23rem" color="whiteAlpha.600">
+          <Text mt={'3rem'} pe="4" maxW="23rem" color="whiteAlpha.600">
             Find a variety of properties that suit you very easily, forget all
             difficulties in finding a residence for you.
           </Text>

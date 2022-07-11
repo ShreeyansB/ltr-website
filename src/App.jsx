@@ -6,7 +6,6 @@ import Banner from "./home/Banner";
 import Footer from "./home/Footer";
 import Sections from "./home/Sections";
 import Info from "./info/Info";
-import Walkthrough from "./walkthrough/Walkthrough";
 
 function App() {
   return (
@@ -26,9 +25,6 @@ function App() {
             }
           />
           <Route path="/info/*" element={<Info />} />
-          <Route path="/walk">
-            <Route path=":buildId" element={<Walkthrough />} />
-          </Route>
         </Routes>
         <Footer />
       </DarkMode>
